@@ -19,6 +19,11 @@
 		7C96CA5D2AE710CF006056DE /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C96CA5C2AE710CF006056DE /* ExercisesViewController.swift */; };
 		7C96CA5F2AE710FC006056DE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C96CA5E2AE710FC006056DE /* TabBarController.swift */; };
 		7C96CA622AE71B70006056DE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C96CA612AE71B70006056DE /* Constants.swift */; };
+		7C96CA652AE8449C006056DE /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C96CA642AE8449C006056DE /* Exercise.swift */; };
+		7CC716F12AE99DDE00A8F06C /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC716F02AE99DDE00A8F06C /* ExerciseCell.swift */; };
+		7CC716F42AE99F3F00A8F06C /* ExerciseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC716F32AE99F3F00A8F06C /* ExerciseImageView.swift */; };
+		7CC716F62AE9A10F00A8F06C /* WTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC716F52AE9A10F00A8F06C /* WTLabel.swift */; };
+		7CC716FA2AE9A40E00A8F06C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC716F92AE9A40E00A8F06C /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		7C96CA5C2AE710CF006056DE /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		7C96CA5E2AE710FC006056DE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7C96CA612AE71B70006056DE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7C96CA642AE8449C006056DE /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		7CC716F02AE99DDE00A8F06C /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
+		7CC716F32AE99F3F00A8F06C /* ExerciseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseImageView.swift; sourceTree = "<group>"; };
+		7CC716F52AE9A10F00A8F06C /* WTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTLabel.swift; sourceTree = "<group>"; };
+		7CC716F92AE9A40E00A8F06C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,9 @@
 		7C96CA272AE6F147006056DE /* WorkoutTracker */ = {
 			isa = PBXGroup;
 			children = (
+				7CC716F82AE9A3FB00A8F06C /* Extensions */,
+				7CC716EE2AE99DC500A8F06C /* Views */,
+				7C96CA632AE84492006056DE /* Models */,
 				7C96CA602AE71B60006056DE /* Utilities */,
 				7C96CA5B2AE70611006056DE /* Delegates */,
 				7C96CA5A2AE705DF006056DE /* Controllers */,
@@ -158,6 +171,56 @@
 				7C96CA612AE71B70006056DE /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7C96CA632AE84492006056DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C96CA642AE8449C006056DE /* Exercise.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7CC716EE2AE99DC500A8F06C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CC716F72AE9A11400A8F06C /* Labels */,
+				7CC716F22AE99F2700A8F06C /* ImageViews */,
+				7CC716EF2AE99DCE00A8F06C /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7CC716EF2AE99DCE00A8F06C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7CC716F02AE99DDE00A8F06C /* ExerciseCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7CC716F22AE99F2700A8F06C /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				7CC716F32AE99F3F00A8F06C /* ExerciseImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		7CC716F72AE9A11400A8F06C /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				7CC716F52AE9A10F00A8F06C /* WTLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		7CC716F82AE9A3FB00A8F06C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CC716F92AE9A40E00A8F06C /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,11 +354,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC716FA2AE9A40E00A8F06C /* UIViewExtensions.swift in Sources */,
 				7C96CA592AE705D7006056DE /* WorkoutViewController.swift in Sources */,
+				7CC716F62AE9A10F00A8F06C /* WTLabel.swift in Sources */,
 				7C96CA292AE6F147006056DE /* AppDelegate.swift in Sources */,
+				7CC716F42AE99F3F00A8F06C /* ExerciseImageView.swift in Sources */,
 				7C96CA5F2AE710FC006056DE /* TabBarController.swift in Sources */,
 				7C96CA2B2AE6F147006056DE /* SceneDelegate.swift in Sources */,
+				7CC716F12AE99DDE00A8F06C /* ExerciseCell.swift in Sources */,
 				7C96CA5D2AE710CF006056DE /* ExercisesViewController.swift in Sources */,
+				7C96CA652AE8449C006056DE /* Exercise.swift in Sources */,
 				7C96CA622AE71B70006056DE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
