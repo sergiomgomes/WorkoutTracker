@@ -16,6 +16,7 @@ class ExercisesViewController: UIViewController {
         super.viewDidLoad()
 
         configureViewController()
+        getExercises()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +38,20 @@ class ExercisesViewController: UIViewController {
         tableView.register(ExerciseCell.self, forCellReuseIdentifier: ExerciseCell.reuseId)
     }
     
+    private func getExercises() {
+        DispatchQueue.main.async {
+            NetworkManager.shared.getExercises(offset: 1, limit: 100) { [weak self] result in
+                guard let self = self else { return }
+                
+                switch result {
+                case .success(let exercises):
+                    self.exercises.append(contentsOf: exercises)
+                case .failure(let error):
+                    print("error: \(error)")
+                }
+            }
+        }
+    }
 
 }
 

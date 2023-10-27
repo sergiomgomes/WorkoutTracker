@@ -8,5 +8,7 @@
 import Foundation
 
 struct Exercise: Codable, Hashable {
-    
+    var bodyPart: String
+    var name: String
+    var gifUrl: String
 }

@@ -24,7 +24,9 @@ class ExerciseCell: UITableViewCell {
     }
     
     func set(exercise: Exercise){
-        //TODO: implement
+        exerciseNameLabel.text = exercise.name
+        exerciseTypeLabel.text = exercise.bodyPart
+        exerciseImageView.setImage(from: exercise.gifUrl)
     }
     
     private func configure() {
