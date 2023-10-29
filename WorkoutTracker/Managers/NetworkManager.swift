@@ -9,7 +9,7 @@ import UIKit
 
 class NetworkManager {
     static let shared = NetworkManager()
-    private let baseUrl = "https://exercisedb.p.rapidapi.com/"
+    private let baseUrl = "https://exercisedb.p.rapidapi.com"
     let cache = NSCache<NSString, UIImage>()
     
     private init(){}

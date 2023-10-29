@@ -11,8 +11,8 @@ class ExerciseCell: UITableViewCell {
     
     static let reuseId = "ExerciseCell"
     let exerciseImageView = ExerciseImageView(frame: .zero)
-    let exerciseNameLabel = WTLabel(textAlignment: .left, fontSize: 26)
-    let exerciseTypeLabel = WTLabel(textAlignment: .left, fontSize: 18)
+    let exerciseNameLabel = WTLabel(textAlignment: .left, fontSize: 20)
+    let exerciseTypeLabel = WTLabel(textAlignment: .left, fontSize: 14)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,8 +24,8 @@ class ExerciseCell: UITableViewCell {
     }
     
     func set(exercise: Exercise){
-        exerciseNameLabel.text = exercise.name
-        exerciseTypeLabel.text = exercise.bodyPart
+        exerciseNameLabel.text = exercise.name.pascalCase
+        exerciseTypeLabel.text = exercise.bodyPart.pascalCase
         exerciseImageView.setImage(from: exercise.gifUrl)
     }
     
@@ -38,16 +38,15 @@ class ExerciseCell: UITableViewCell {
             exerciseImageView.heightAnchor.constraint(equalToConstant: 60),
             exerciseImageView.widthAnchor.constraint(equalToConstant: 60),
             
-            exerciseNameLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            exerciseNameLabel.leadingAnchor.constraint(equalTo: exerciseImageView.trailingAnchor, constant: 24),
+            exerciseNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
+            exerciseNameLabel.leadingAnchor.constraint(equalTo: exerciseImageView.trailingAnchor, constant: 20),
             exerciseNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -12),
-            exerciseNameLabel.heightAnchor.constraint(equalToConstant: 40),
+            exerciseNameLabel.heightAnchor.constraint(equalToConstant: 20),
             
-            //exerciseTypeLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            exerciseTypeLabel.topAnchor.constraint(equalTo: exerciseNameLabel.bottomAnchor, constant: 24),
-            exerciseTypeLabel.leadingAnchor.constraint(equalTo: exerciseImageView.trailingAnchor, constant: 24),
+            exerciseTypeLabel.topAnchor.constraint(equalTo: exerciseNameLabel.bottomAnchor, constant: 12),
+            exerciseTypeLabel.leadingAnchor.constraint(equalTo: exerciseImageView.trailingAnchor, constant: 20),
             exerciseTypeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -12),
-            exerciseTypeLabel.heightAnchor.constraint(equalToConstant: 40)
+            exerciseTypeLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
         
     }

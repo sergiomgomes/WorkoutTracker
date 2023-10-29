@@ -16,6 +16,7 @@ class ExercisesViewController: UIViewController {
         super.viewDidLoad()
 
         configureViewController()
+        configureTableView()
         getExercises()
     }
     
@@ -33,31 +34,36 @@ class ExercisesViewController: UIViewController {
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.rowHeight = 80
+        tableView.delegate = self
         tableView.dataSource = self
         
         tableView.register(ExerciseCell.self, forCellReuseIdentifier: ExerciseCell.reuseId)
     }
     
     private func getExercises() {
-        DispatchQueue.main.async {
-            NetworkManager.shared.getExercises(offset: 1, limit: 100) { [weak self] result in
-                guard let self = self else { return }
-                
-                switch result {
-                case .success(let exercises):
-                    self.exercises.append(contentsOf: exercises)
-                case .failure(let error):
-                    print("error: \(error)")
+        NetworkManager.shared.getExercises(offset: 1, limit: 100) { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let exercises):
+                self.exercises = exercises
+                print("self.exercises \(self.exercises)")
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.view.bringSubviewToFront(self.tableView)
                 }
+            case .failure(let error):
+                print("error: \(error)")
             }
         }
     }
 
 }
 
-extension ExercisesViewController : UITableViewDataSource {
+extension ExercisesViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("count \(exercises.count)")
         return exercises.count
     }
     
