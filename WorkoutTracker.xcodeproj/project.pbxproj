@@ -25,7 +25,6 @@
 		7CC716FA2AE9A40E00A8F06C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC716F92AE9A40E00A8F06C /* UIViewExtensions.swift */; };
 		7CE9AAC62AEAE17B00C9D8CA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9AAC52AEAE17B00C9D8CA /* NetworkManager.swift */; };
 		7CE9AAC82AEAE47500C9D8CA /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9AAC72AEAE47500C9D8CA /* ErrorMessages.swift */; };
-		7CE9AACA2AEF0F3900C9D8CA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9AAC92AEF0F3900C9D8CA /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +67,6 @@
 		7CC716F92AE9A40E00A8F06C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		7CE9AAC52AEAE17B00C9D8CA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7CE9AAC72AEAE47500C9D8CA /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
-		7CE9AAC92AEF0F3900C9D8CA /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				7CC716F92AE9A40E00A8F06C /* UIViewExtensions.swift */,
-				7CE9AAC92AEF0F3900C9D8CA /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -377,7 +374,6 @@
 				7C96CA2B2AE6F147006056DE /* SceneDelegate.swift in Sources */,
 				7CE9AAC82AEAE47500C9D8CA /* ErrorMessages.swift in Sources */,
 				7CC716F12AE99DDE00A8F06C /* ExerciseCell.swift in Sources */,
-				7CE9AACA2AEF0F3900C9D8CA /* StringExtensions.swift in Sources */,
 				7C96CA5D2AE710CF006056DE /* ExercisesViewController.swift in Sources */,
 				7C96CA652AE8449C006056DE /* Exercise.swift in Sources */,
 				7C96CA622AE71B70006056DE /* Constants.swift in Sources */,

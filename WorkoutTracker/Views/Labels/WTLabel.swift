@@ -18,10 +18,11 @@ class WTLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
+    convenience init(textAlignment: NSTextAlignment, fontSize: CGFloat, textColor: UIColor? = UIColor.black, isBold: Bool? = true) {
         self.init(frame: .zero)
         self.textAlignment = textAlignment
-        self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
+        self.font = UIFont.systemFont(ofSize: fontSize, weight: isBold! ? .bold : .light)
+        self.textColor = textColor
     }
 
     private func configure() {

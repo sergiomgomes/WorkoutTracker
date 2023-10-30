@@ -11,8 +11,8 @@ class ExerciseCell: UITableViewCell {
     
     static let reuseId = "ExerciseCell"
     let exerciseImageView = ExerciseImageView(frame: .zero)
-    let exerciseNameLabel = WTLabel(textAlignment: .left, fontSize: 20)
-    let exerciseTypeLabel = WTLabel(textAlignment: .left, fontSize: 14)
+    let exerciseNameLabel = WTLabel(textAlignment: .left, fontSize: 18)
+    let exerciseTypeLabel = WTLabel(textAlignment: .left, fontSize: 15, textColor: UIColor.darkGray, isBold: false)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,8 +24,8 @@ class ExerciseCell: UITableViewCell {
     }
     
     func set(exercise: Exercise){
-        exerciseNameLabel.text = exercise.name.pascalCase
-        exerciseTypeLabel.text = exercise.bodyPart.pascalCase
+        exerciseNameLabel.text = exercise.name.capitalized
+        exerciseTypeLabel.text = exercise.bodyPart.capitalized
         exerciseImageView.setImage(from: exercise.gifUrl)
     }
     
