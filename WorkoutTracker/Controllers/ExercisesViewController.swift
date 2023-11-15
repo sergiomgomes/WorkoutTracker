@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExercisesViewController: UIViewController {
+class ExercisesViewController: WTDataLoadingViewController {
     
     let tableView = UITableView()
     var exercises: [Exercise] = []
@@ -41,8 +41,10 @@ class ExercisesViewController: UIViewController {
     }
     
     private func getExercises() {
+        showLoadingView()
         NetworkManager.shared.getExercises(offset: 1, limit: 100) { [weak self] result in
             guard let self = self else { return }
+            self.dismissLoadingView()
             
             switch result {
             case .success(let exercises):

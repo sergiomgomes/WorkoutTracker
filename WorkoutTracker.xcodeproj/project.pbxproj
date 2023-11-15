@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C06B0CD2B0565DD00E5DD98 /* WTDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06B0CC2B0565DD00E5DD98 /* WTDataLoadingViewController.swift */; };
 		7C96CA292AE6F147006056DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C96CA282AE6F147006056DE /* AppDelegate.swift */; };
 		7C96CA2B2AE6F147006056DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C96CA2A2AE6F147006056DE /* SceneDelegate.swift */; };
 		7C96CA322AE6F149006056DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C96CA312AE6F149006056DE /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C06B0CC2B0565DD00E5DD98 /* WTDataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTDataLoadingViewController.swift; sourceTree = "<group>"; };
 		7C96CA252AE6F147006056DE /* WorkoutTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C96CA282AE6F147006056DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C96CA2A2AE6F147006056DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C06B0CB2B0565AF00E5DD98 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		7C96CA1C2AE6F147006056DE = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +163,7 @@
 				7C96CA582AE705D7006056DE /* WorkoutViewController.swift */,
 				7C96CA5C2AE710CF006056DE /* ExercisesViewController.swift */,
 				7C96CA5E2AE710FC006056DE /* TabBarController.swift */,
+				7C06B0CC2B0565DD00E5DD98 /* WTDataLoadingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +197,7 @@
 		7CC716EE2AE99DC500A8F06C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7C06B0CB2B0565AF00E5DD98 /* New Group */,
 				7CC716F72AE9A11400A8F06C /* Labels */,
 				7CC716F22AE99F2700A8F06C /* ImageViews */,
 				7CC716EF2AE99DCE00A8F06C /* Cells */,
@@ -368,6 +379,7 @@
 				7CC716FA2AE9A40E00A8F06C /* UIViewExtensions.swift in Sources */,
 				7C96CA592AE705D7006056DE /* WorkoutViewController.swift in Sources */,
 				7CC716F62AE9A10F00A8F06C /* WTLabel.swift in Sources */,
+				7C06B0CD2B0565DD00E5DD98 /* WTDataLoadingViewController.swift in Sources */,
 				7C96CA292AE6F147006056DE /* AppDelegate.swift in Sources */,
 				7CC716F42AE99F3F00A8F06C /* ExerciseImageView.swift in Sources */,
 				7C96CA5F2AE710FC006056DE /* TabBarController.swift in Sources */,
