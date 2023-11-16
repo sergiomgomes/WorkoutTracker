@@ -76,4 +76,13 @@ extension ExercisesViewController : UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            let exerciseViewController = ExerciseViewController()
+            exerciseViewController.modalPresentationStyle = .overFullScreen
+            exerciseViewController.modalTransitionStyle = .crossDissolve
+            self.present(exerciseViewController, animated: true)
+        }
+    }
 }
